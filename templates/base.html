@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <title>{% block title %}TITLE HERE{% endblock %}</title>
+  <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+  <h1>{% block heading %}HEADING OF PAGE{% endblock %}</h1>
+  {% block content %}
+      CONTENT OF PAGE
+  {% endblock %}
+</body>
+
+<footer>
+  Application Site 2017
+</footer>
+</html>

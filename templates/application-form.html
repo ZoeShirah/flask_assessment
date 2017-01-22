@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Application Form{% endblock %}
+{% block heading %}Welcome!{% endblock %}
+
+{% block content %}
+  <p class="instructions">To apply for one of our open positions, please complete this short form with some basic information.  Click submit when you are finished.
+  </p>
+
+  <form action="/application-success" method="POST">
+    Enter Your Name:<br>
+    <label for="First">First: </label> <!--labels and ids for accessability -->
+      <input id="First" name="first" type="text">
+    <label for="Last">Last: </lable>
+      <input id="Last" name="last" type="text"><br><br>
+    <label for="salary">Salary Requirement: $</label>
+      <input type="number" step="any" name="salary"><br>
+    <label for="jobtitle">Select Job Title: </label>
+    <select id="jobtitle" name="jobtitle">
+      {% for job in available %}
+        <option value="{{ job }}">{{ job }}</option>
+      {% endfor %}
+    </select><br><br>
+    <input type="submit">
+  </form>
+
+{% endblock %}
