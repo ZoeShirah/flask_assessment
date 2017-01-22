@@ -3,9 +3,7 @@
 
 {% block heading %}Nice to meet you {{ applicant }}!{% endblock %}
 {% block content %}
-<p> Thank you for applying to be a {{ job }}, your minimum salary requirement 
-    is {{ "${:.2f}".format(salary) }} We are looking forward to reviewing your
-    application and will be in touch.
+<p class="instructions"> Thank you for applying to be a {{ job }}, your minimum salary requirement is {{ "${:.2f}".format(salary) }} We are looking forward to reviewing your application and will be in touch.
 </p>
 {% endblock %}
 
